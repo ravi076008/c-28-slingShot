@@ -1,8 +1,8 @@
 class Chain{
-    constructor(Body1,Body2){
+    constructor(Body1,point2){
         var options= {
           bodyA:Body1 ,
-          bodyB:Body2,
+          pointB:point2,
           stiffness:0.5,
           length:10
 
@@ -17,7 +17,7 @@ World.add(world,this.chain)
     }
 display(){
     var pos=this.chain.bodyA.position
-    var pos2=this.chain.bodyB.position
+    var pos2=this.chain.pointB
 line(pos.x,pos.y,pos2.x,pos2.y);
 
 

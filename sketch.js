@@ -35,7 +35,7 @@ function setup(){
     log5 = new Log(870,120,150, -PI/7);
 
     bird = new Bird(100,100);
-    chain1 = new Chain(bird.body,log5.body)
+    chain1 = new Chain(bird.body,{x:300,y:100})
 
 }
 
@@ -62,5 +62,23 @@ function draw(){
 
     bird.display();
     platform.display();
+if(chain1.chain.bodyA){
+
     chain1.display();
+
+}
+    
+}
+function mouseDragged(){
+bird.body.position.x=mouseX;
+bird.body.position.y=mouseY;
+
+}
+ 
+function mouseReleased(){
+chain1.chain.bodyA=null;
+
+
+
+
 }
